@@ -1,0 +1,1 @@
+Only the scripts are shown on my portfolio. 
