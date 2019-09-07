@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 ## Personal Information
 Nolan Davenport
 
