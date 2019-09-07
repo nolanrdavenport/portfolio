@@ -11,6 +11,13 @@ Computer Engineering
 The University of Texas at Dallas
 
 ## Purpose
-The purpose of this repository is to host my portfolio. 
+The purpose of this repository is to showcase my programming projects. 
+
+## Experience
+Java (3 Years)
+
+C# (Unity Scripting)
+
+C++ (< 2 months)
 
 
