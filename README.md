@@ -11,7 +11,7 @@ Computer Engineering
 The University of Texas at Dallas
 
 ## Purpose
-The purpose of this repository is to showcase my programming projects. Unfortunately, only a few of my projects are showcased because I was too young and immature during highschool to save my projects on a cloud and most of them were lost one way or another. 
+The purpose of this repository is to showcase the few projects throughout highschool that I saved. 
 
 ## Experience
 Java (3 Years)
