@@ -1,4 +1,5 @@
 # portfolio
+## Personal Information
 Nolan Davenport
 
 nolanrdavenport@gmail.com
@@ -9,7 +10,7 @@ Computer Engineering
 
 The University of Texas at Dallas
 
-
+## Purpose
 The purpose of this repository is to host my portfolio. 
 
 
