@@ -4,6 +4,8 @@ Nolan Davenport
 
 nolanrdavenport@gmail.com
 
+nolandavenport.tech
+
 (281)-203-2172
 
 Computer Engineering
