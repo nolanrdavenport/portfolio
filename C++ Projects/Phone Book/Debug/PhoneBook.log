@@ -1,0 +1,16 @@
+﻿  addUpdateCommand.cpp
+  assignment2.cpp
+  bookCommand.cpp
+  eraseCommand.cpp
+  phoneBook.cpp
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(57,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(72,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(91,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(95,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(111,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(115,21): warning C4018:  '<': signed/unsigned mismatch
+  phoneBookEntry.cpp
+  printCommand.cpp
+  Generating Code...
+C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\PhoneBook\phoneBook.cpp(158,20): warning C4018:  '<': signed/unsigned mismatch
+  PhoneBook.vcxproj -> C:\Users\guzzo\Documents\GitHub\SchoolProjects\PhoneBook\Debug\PhoneBook.exe
