@@ -1,0 +1,18 @@
+        .text
+main:   lw $t0,data1
+        lw $t1,data2
+        bgez $t0,g1
+        bltz $t0,l1
+g1:     move $a0,$t0
+        li $v0,1
+        syscall
+l1:     bgez $t1,g2
+        bltz $t1,l2
+g2:     move $a0,$t1
+        li $v0,1
+        syscall
+l2:     li $v0,10
+        syscall
+        .data
+data1:  .word 0x0001ead7
+data2:  .word 0x9800fffe

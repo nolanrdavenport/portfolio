@@ -1,0 +1,38 @@
+.text
+main:   la $t0,str
+        la $t7,str
+comp:   lb $t1,0($t0)
+        lb $t2,1($t0)
+        beq $t2,10,sorted
+        ble $t1,$t2,count
+        jal sort
+        j comp
+count:  addi $t0,$t0,1
+        j comp
+sorted: la $t0,str
+pLoop:  lb $a0,0($t0)
+        beq $a0,10,done
+        li $v0,11
+        syscall
+        addi $t0,$t0,1
+        j pLoop
+done:   li $v0,10
+        syscall
+
+sort:   sub $sp,$sp,4
+        sw $ra,($sp)
+        sb $t1,1($t0)
+        sb $t2,0($t0)
+        beq $t0,$t7,goback
+        sub $t0,$t0,1
+        lb $t1,0($t0)
+        lb $t2,1($t0)
+        ble $t1,$t2,goback
+        jal sort
+goback: addi $t0,$t0,1
+        lw $ra,($sp)
+        addi $sp,$sp,4
+        jr $ra
+
+        .data
+str:    .asciiz "Hello, world!\n"

@@ -1,0 +1,28 @@
+        .text
+main:   lw $t0,data1
+        lw $t1,data2
+        add $t2,$t0,$t1     #data1+data2
+        lw $t0,data3
+        add $t3,$t0,$t2     #sum+data3
+        lw $t0,data4
+        mul $t4,$t3,$t0
+        lw $t0,data5
+        sub $t5,$t4,$t0
+        neg $t6,$t5
+        sw $t6,ans
+        la $a0,str
+        li $v0,4
+        syscall
+        lw $a0,ans
+        li $v0,1
+        syscall
+        li $v0,10
+        syscall
+        .data
+str:    .asciiz "Answer = "
+data1:  .word 95
+data2:  .word 270
+data3:  .word 88
+data4:  .word 23
+data5:  .word 456
+ans:    .word 0

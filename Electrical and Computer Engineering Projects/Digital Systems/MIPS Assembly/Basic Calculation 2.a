@@ -1,0 +1,29 @@
+        .text
+main:   lw $t0,t
+        lw $t1,u
+        add $t2,$t0,$t1
+        sw $t2,x
+        lw $t0,v
+        lw $t1,w
+        or $t3,$t0,$t1
+        sw $t3,y
+        lw $t0,x
+        lw $t1,y
+        mul $t4,$t0,$t1
+        sw $t4,z
+        lw $t5,z
+        add $t6,$t0,$t1
+        add $t7,$t6,$t5
+        move $a0,$t7
+        li $v0,1
+        syscall
+        li $v0,10
+        syscall
+        .data
+t:      .word 100
+u:      .word 54
+v:      .word 37
+w:      .word 23
+x:      .word 0
+y:      .word 0
+z:      .word 0

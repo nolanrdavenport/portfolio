@@ -1,0 +1,48 @@
+        .data
+array:  .space 1600
+
+        .text
+main:   la $t0,array
+        move $t1,$0 # row counter
+        move $t3,$0 # numbers to be added
+        addi $t3,$t3,1 # starting at 1
+fill:   beq $t1,20,done
+        la $t4,80($t0)
+        beq $t3,1,even
+        beq $t3,20,odd
+even:   sw $t3,0($t0)
+        addi $t0,$t0,4
+        beq $t0,$t4,count
+        addi $t3,$t3,1
+        j even
+odd:    sw $t3,0($t0)
+        addi $t0,$t0,4
+        beq $t0,$t4,count
+        sub $t3,$t3,1
+        j odd
+count:  addi $t1,$t1,1
+        j fill
+done:   la $t0,array
+        move $t1,$0
+        move $t3,$0
+print:  lw $t2,0($t0)
+        move $a0,$t2
+        li $v0,1
+        syscall
+        li $a0,32
+        li $v0,11
+        syscall
+        addi $t1,$t1,1
+        addi $t3,$t3,1
+        beq $t3,20,cr
+cont:   addi $t0,$t0,4
+        beq $t1,400,end
+        j print
+end:    li $v0,10
+        syscall
+
+cr:     move $t3,$0
+        li $a0,10
+        li $v0,11
+        syscall
+        j cont

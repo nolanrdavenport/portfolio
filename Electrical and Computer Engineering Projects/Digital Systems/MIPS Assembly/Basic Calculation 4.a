@@ -1,0 +1,33 @@
+        .text
+main:   lw $t0,aa
+        div $t1,$t0,9
+        sw $t1,bb
+        lw $t1,bb
+        sub $t2,$t0,$t1
+        sw $t2,cc
+        lw $t1,cc
+        or $t2,$t0,$t1
+        sw $t2,dd
+        lw $t1,dd
+        and $t2,$t0,$t1
+        sw $t2,ee
+        lw $t0,dd
+        lw $t1,ee
+        xor $t2,$t0,$t1
+        sw $t2,ff
+        la $a0,ldr
+        li $v0,4
+        syscall
+        lw $a0,ff
+        li $v0,1
+        syscall
+        li $v0,10
+        syscall
+        .data
+aa:     .word 35987
+bb:     .word 0
+cc:     .word 0
+dd:     .word 0
+ee:     .word 0
+ff:     .word 0
+ldr:    .asciiz "Final answer = "

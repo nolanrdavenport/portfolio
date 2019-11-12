@@ -1,0 +1,56 @@
+#define LED1 38
+#define LED2 39
+#define LED3 40
+#define LED4 35
+#define LED5 36
+#define LED6 37
+
+/*
+ * This is a traffic light controller that controls 6 LEDs that represent 2 sets of traffic lights.
+ */
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED3, OUTPUT);    // green NS
+  pinMode(LED2, OUTPUT);    // orange NS
+  pinMode(LED1, OUTPUT);    // red NS
+  pinMode(LED6, OUTPUT);    // green EW
+  pinMode(LED5, OUTPUT);    // orange EW
+  pinMode(LED4, OUTPUT);    // red EW
+  digitalWrite(LED4, HIGH); // Start with red light
+  digitalWrite(LED1, HIGH); // Start with red light
+  NS();
+}
+
+void loop() {}
+
+/*
+ * This function performs the sequence for the north/south set of traffic lights. 
+ */
+void NS(){
+  delay(1000);              // Delay so that both sets of lights will be red for a second
+  digitalWrite(LED1, LOW);  // Turn red light off
+  digitalWrite(LED3, HIGH); // Turn green light on
+  delay(5000);              // Green light stays on for 5 seconds
+  digitalWrite(LED3, LOW);  // Turn green light off
+  digitalWrite(LED2, HIGH); // Turn yellow light on
+  delay(2000);              // Yellow light stays on for 2 seconds
+  digitalWrite(LED2, LOW);  // Turn yellow light off
+  digitalWrite(LED1, HIGH); // Turn red light on
+  EW();                     // Start the east/west sequence
+}
+
+/*
+ * This function performs the sequence for the east/west set of traffic lights.
+ */
+void EW(){
+  delay(1000);              // Delay so that both sets of lights will be red for a second
+  digitalWrite(LED4, LOW);  // Turn red light off
+  digitalWrite(LED6, HIGH); // Turn green light on
+  delay(5000);              // Green light stays on for 5 seconds
+  digitalWrite(LED6, LOW);  // Turn green light off
+  digitalWrite(LED5, HIGH); // Turn yellow light on
+  delay(2000);              // Yellow light stays on for 2 seconds
+  digitalWrite(LED5, LOW);  // Turn yellow light off
+  digitalWrite(LED4, HIGH); // Turn red light on
+  NS();                     // Start the north/south sequence
+}
