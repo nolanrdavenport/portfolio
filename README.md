@@ -2,24 +2,19 @@
 ## Personal Information
 Nolan Davenport
 
-nolanrdavenport@gmail.com
+nrd180001@utdallas.edu
 
 nolandavenport.tech
 
-(281)-203-2172
-
-Computer Engineering
-
 The University of Texas at Dallas
+Bachelor of Science in Computer Engineering
 
 ## Purpose
-The purpose of this repository is to showcase the few projects throughout highschool that I saved. 
+The purpose of this repository is to showcase my academic and personal projects. 
 
 ## Experience
-Java (3 Years)
+Java, C++, C#, C, Matlab, MIPS Assembly. 
 
-C# (Unity Scripting)
-
-C++ (< 2 months)
+CAD schematic design
 
 
