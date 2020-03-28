@@ -10,6 +10,7 @@ let yPos = 500;
 let xSize = 0;
 let ySize = 0;
 
+// Holds the data for each square or, Cell.
 function Cell(isAlive, xPos, yPos) {
     this.isAlive = isAlive;
     this.xPos = xPos;
@@ -18,13 +19,14 @@ function Cell(isAlive, xPos, yPos) {
 
 let cells;
 
+// Initialize game
 window.onload = function() {
     canvas = document.getElementById("backgroundCanvas");
     context = canvas.getContext("2d");
-    canvas.width = Math.ceil($(window).width() / 100) * 100;
-    canvas.height = Math.ceil($(window).height() / 100) * 100;
+    canvas.width = Math.ceil($(window).width() / 200) * 200;
+    canvas.height = Math.ceil($(window).height() / 200) * 200;
 
-    squareSize = (canvas.width / 100);
+    squareSize = (canvas.width / 200);
     for (let i = 0; i < this.canvas.width; i += squareSize) {
         xSize++;
         ySize = 0;
@@ -44,19 +46,20 @@ window.onload = function() {
         }
     }
 
-    for (let i = 0; i < 800; i++) {
-        let randCellX = Math.floor(Math.random() * xSize);
-        let randCellY = Math.floor(Math.random() * ySize);
-        cells[randCellY][randCellX].isAlive = true;
-        console.log(randCellX + " " + randCellY);
+    for (let i = 0; i < 2000; i++) {
+        let xShotGun = Math.floor((Math.random() * xSize));
+        let yShotGun = Math.floor((Math.random() * ySize));
+        cells[yShotGun][xShotGun].isAlive = true;
     }
 
+    // Starts the game loop
     this.setInterval(tick, 1000 / 20);
 }
 
+// Each tick is a frame in the game
 function tick() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "rgb(0, 10, 0)";
+    context.fillStyle = "rgb(0, 20, 0)";
     //context.fillStyle = "white";
 
     for (let r = 0; r < ySize - 1; r++) {
@@ -71,9 +74,9 @@ function tick() {
             if (cells[r + 1][c].isAlive == true) { neighbours += 1; }
             if (cells[r + 1][c + 1].isAlive == true) { neighbours += 1; }
 
-            //live cell with 2 or 3 neighbors stays alive
+            // Rules of the game
             if (cells[r][c].isAlive && (neighbours == 2 || neighbours == 3)) {
-                // YOU SURVIVE
+                // YOU SURVIVE - aka - do nothing
             } else if (!cells[r][c].isAlive && neighbours == 3) {
                 cells[r][c].isAlive = true;
             } else {
@@ -83,6 +86,7 @@ function tick() {
         }
     }
 
+    // Draws the game onto the canvas
     for (let r = 0; r < ySize; r++) {
         for (let c = 0; c < xSize; c++) {
             if (cells[r][c].isAlive) {
