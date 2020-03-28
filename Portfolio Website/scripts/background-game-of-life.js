@@ -18,6 +18,11 @@ function Cell(isAlive, xPos, yPos) {
 }
 
 let cells;
+let gameColor = "rgb(0, 20, 0)";
+
+function changeColor(newColor){
+    gameColor = newColor;
+}
 
 // Initialize game
 window.onload = function() {
@@ -59,8 +64,7 @@ window.onload = function() {
 // Each tick is a frame in the game
 function tick() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "rgb(0, 20, 0)";
-    //context.fillStyle = "white";
+    context.fillStyle = gameColor;
 
     let next;
     next = new this.Array(ySize);
