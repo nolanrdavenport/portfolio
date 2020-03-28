@@ -40,13 +40,13 @@ window.onload = function() {
         cells[i] = new this.Array(xSize);
     }
 
-    for (let r = 0; r < xSize; r++) {
-        for (let c = 0; c < ySize; c++) {
-            cells[c][r] = new Cell(false, r * squareSize, c * squareSize);
+    for (let r = 0; r < ySize; r++) {
+        for (let c = 0; c < xSize; c++) {
+            cells[r][c] = new Cell(false, c * squareSize, r * squareSize);
         }
     }
 
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < 10000; i++) {
         let xShotGun = Math.floor((Math.random() * xSize));
         let yShotGun = Math.floor((Math.random() * ySize));
         cells[yShotGun][xShotGun].isAlive = true;
@@ -62,29 +62,52 @@ function tick() {
     context.fillStyle = "rgb(0, 20, 0)";
     //context.fillStyle = "white";
 
+    let next;
+    next = new this.Array(ySize);
+    for (let i = 0; i < xSize; i++) {
+        next[i] = new this.Array(xSize);
+    }
+
+    for (let r = 0; r < ySize; r++) {
+        for (let c = 0; c < xSize; c++) {
+            next[r][c] = new Cell(false, c * squareSize, r * squareSize);
+        }
+    }
     for (let r = 0; r < ySize - 1; r++) {
         for (let c = 0; c < xSize - 1; c++) {
             let neighbours = 0;
-            if (r >= 1 && c >= 1 && cells[r - 1][c - 1].isAlive == true) { neighbours += 1; }
-            if (r >= 1 && cells[r - 1][c].isAlive == true) { neighbours += 1; }
-            if (r >= 1 && cells[r - 1][c + 1].isAlive == true) { neighbours += 1; }
-            if (c >= 1 && cells[r][c - 1].isAlive == true) { neighbours += 1; }
-            if (cells[r][c + 1].isAlive) { neighbours += 1; }
-            if (c >= 1 && cells[r + 1][c - 1].isAlive == true) { neighbours += 1; }
-            if (cells[r + 1][c].isAlive == true) { neighbours += 1; }
-            if (cells[r + 1][c + 1].isAlive == true) { neighbours += 1; }
+
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if ((r + i) >= 0 && (c + j) >= 0 && cells[r + i][c + j].isAlive) {
+                        neighbours++;
+                    }
+                }
+            }
+            if (cells[r][c].isAlive) {
+                neighbours -= 1;
+            }
 
             // Rules of the game
-            if (cells[r][c].isAlive && (neighbours == 2 || neighbours == 3)) {
-                // YOU SURVIVE - aka - do nothing
-            } else if (!cells[r][c].isAlive && neighbours == 3) {
-                cells[r][c].isAlive = true;
+            if ((cells[r][c].isAlive) && neighbours < 2) {
+                next[r][c].isAlive = false;
+            } else if ((cells[r][c].isAlive) && neighbours > 3) {
+                next[r][c].isAlive = false;
+            } else if ((cells[r][c].isAlive == false) && neighbours == 3) {
+                next[r][c].isAlive = true;
             } else {
-                cells[r][c].isAlive = false;
+                next[r][c].isAlive = cells[r][c].isAlive;
             }
 
         }
     }
+    for (let r = 0; r < ySize; r++) {
+        for (let c = 0; c < xSize; c++) {
+            cells[r][c] = next[r][c];
+        }
+    }
+
+
 
     // Draws the game onto the canvas
     for (let r = 0; r < ySize; r++) {

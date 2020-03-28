@@ -92,6 +92,10 @@ h1 {
     text-decoration: none;
 }
 
+.link:hover {
+    color: rgb(253, 255, 157);
+}
+
 body::-webkit-scrollbar {
     z-index: 2;
     width: 10px;
@@ -114,6 +118,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .game-showcase {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
