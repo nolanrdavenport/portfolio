@@ -18,6 +18,8 @@ function Cell(isAlive, xPos, yPos) {
 let cells;
 let gameColor = "rgb(0, 20, 0)";
 
+let interval;
+
 function changeColor(newColor){
     gameColor = newColor;
 }
@@ -60,7 +62,7 @@ function init(){
     }
 
     // Starts the game loop
-    this.setInterval(tick, 1000 / 20);
+    interval = this.setInterval(tick, 1000 / 20);
 }
 
 // Each tick is a frame in the game
@@ -126,6 +128,8 @@ function tick() {
 }
 
 $(window).resize(function() {
+    clearInterval(interval);
+
     width = undefined;
     height = undefined;
     canvas = undefined;
