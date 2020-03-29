@@ -25,6 +25,10 @@ h1 {
     text-align: center;
     margin: 10px;
 }
+.sub-page{
+    text-align: right;
+    margin-right: 10%;
+}
 
 .navigation-bar {
     list-style-type: none;
@@ -48,7 +52,7 @@ h1 {
     border-radius: 5px;
 }
 
-.navigation-bar li a:hover {
+.navigation-bar li a:hover, .navigation-bar li a.active{
     background-color: rgb(0, 20, 0);
 }
 
@@ -69,16 +73,6 @@ h1 {
 
 .main-menu:hover {
     background-color: rgb(0, 20, 0);
-}
-
-.text-body-center {
-    font-size: 20px;
-    text-align: center;
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
 }
 
 .text-body {
@@ -124,5 +118,5 @@ body::-webkit-scrollbar-thumb:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
-    align-items: flex-start;
+    align-items: center;
 }

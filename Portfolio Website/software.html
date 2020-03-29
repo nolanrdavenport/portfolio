@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="libraries/jquery-3.4.1.min.js" type="text/javascript"></script>
     <title>Nolan Davenport Portfolio</title>
+    <script>
+        $(document).ready(function() {
+            $('#curr').toggleClass("active");
+        });
+    </script>
 </head>
 
 <body>
     <div class="background-image"></div>
     <a href="index.html" class="main-menu">Main Menu</a>
-    <h1>Software</h1>
+    <h1 class="sub-page">Software</h1>
     <ul class="navigation-bar">
-        <li><a href="#">Software</a></li>
+        <li><a id="curr" href="#">Software</a></li>
         <li><a href="hardware.html">Hardware</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,7 +27,7 @@
     <div class="text-body">
         <ul class="game-showcase">
             <li class="game-image">
-                <img src="images/software-pictures/lookup.png" width="500px">
+                <img src="images/software-pictures/lookup.png" width="400px">
             </li>
             <li>
                 <div class="game-description">
@@ -42,14 +47,14 @@
         </ul>
         <ul class="game-showcase">
             <li class="game-image">
-                <img src="images/software-pictures/thiswebsite.png" width="500px">
+                <img src="images/software-pictures/thiswebsite.png" width="400px">
             </li>
             <li>
                 <div class="game-description">
                     <h1>This Website! (websiteception)</h1>
                     <p>
                         This website was developed to showcase my portfolio, and since it required<br> 
-                        hours of learning new things, and really stressing my google-foo, It definitely<br> 
+                        hours of learning new things, and really stressing my google-foo, It<br> definitely 
                         deserves a spot on this list.
                         <br><br>
                         <a target="_blank" class="link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here to go to my website</a><br>
@@ -60,19 +65,19 @@
         </ul>
         <ul class="game-showcase">
             <li class="game-image">
-                <img src="images/software-pictures/fsae.png" width="500px">
+                <img src="images/software-pictures/fsae.png" width="300px">
             </li>
             <li>
                 <div class="game-description">
                     <h1>Formula FSAE</h1>
                     <p>
                         Throughout my first year of university, I was part of my schools branch of<br> 
-                        Formula FSAE and have worked on both an electrical team and a few software teams.<br><br> 
-                        I first worked to implement a system that saves chart locations onto the screen<br> 
-                        so that each engineer testing the vehicle can keep their favorite chart layouts.<br><br> 
-                        I then worked with a team on a new project to create a Tuning Logbook. this<br> 
-                        tool will be used for engineers to log the different tests that they do to ensure<br> 
-                        that the data gathered can be connected to different driving conditions<br><br>
+                        Formula FSAE and have worked on both an electrical team and a few software<br> teams.<br><br> 
+                        I first worked to implement a system that saves chart locations onto the<br> 
+                        screen so that each engineer testing the vehicle can keep their favorite <br>chart layouts.<br><br> 
+                        I then worked with a team on a new project to create a Tuning Logbook.<br>
+                        this tool will be used for engineers to log the different tests that they do<br>
+                        to ensure that the data gathered can be connected to different driving conditions<br><br>
                         See code for the <a target="_blank" class="link" href="https://github.com/DallasFormulaRacing/DataAnalyzer">Data Analyzer</a>                       
                         and the <a target="_blank" class="link" href="https://github.com/DallasFormulaRacing/TuningLogbook">Tuning Logbook</a>
                     </p>
