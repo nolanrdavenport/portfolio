@@ -4,8 +4,6 @@ var canvas;
 var context;
 
 let squareSize;
-let xPos = 500;
-let yPos = 500;
 
 let xSize = 0;
 let ySize = 0;
@@ -26,6 +24,10 @@ function changeColor(newColor){
 
 // Initialize game
 window.onload = function() {
+    this.init();
+}
+
+function init(){
     canvas = document.getElementById("backgroundCanvas");
     context = canvas.getContext("2d");
     canvas.width = Math.ceil($(window).width() / 200) * 200;
@@ -122,3 +124,19 @@ function tick() {
         }
     }
 }
+
+$(window).resize(function() {
+    width = undefined;
+    height = undefined;
+    canvas = undefined;
+    context = undefined;
+
+    squareSize = undefined;
+
+    xSize = 0;
+    ySize = 0;
+
+    cells = undefined;
+
+    init();
+});
