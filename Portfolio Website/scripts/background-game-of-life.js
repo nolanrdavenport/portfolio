@@ -45,16 +45,15 @@ function init(){
     }
 
     cells = new this.Array(ySize);
-    for (let i = 0; i < xSize; i++) {
+    for (let i = 0; i < ySize; i++) {
         cells[i] = new this.Array(xSize);
     }
-
+    
     for (let r = 0; r < ySize; r++) {
         for (let c = 0; c < xSize; c++) {
             cells[r][c] = new Cell(false, c * squareSize, r * squareSize);
         }
     }
-
     for (let i = 0; i < 10000; i++) {
         let xShotGun = Math.floor((Math.random() * xSize));
         let yShotGun = Math.floor((Math.random() * ySize));
@@ -72,7 +71,7 @@ function tick() {
 
     let next;
     next = new this.Array(ySize);
-    for (let i = 0; i < xSize; i++) {
+    for (let i = 0; i < ySize; i++) {
         next[i] = new this.Array(xSize);
     }
 
@@ -134,12 +133,9 @@ $(window).resize(function() {
     height = undefined;
     canvas = undefined;
     context = undefined;
-
     squareSize = undefined;
-
     xSize = 0;
     ySize = 0;
-
     cells = undefined;
 
     init();
