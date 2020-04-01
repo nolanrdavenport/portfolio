@@ -26,7 +26,7 @@ h1 {
     margin: 10px;
 }
 .sub-page{
-    text-align: right;
+    text-align: center;
     margin-right: 10%;
 }
 
@@ -119,4 +119,13 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 10px;
+    display: block;
+    padding: 5px;
 }

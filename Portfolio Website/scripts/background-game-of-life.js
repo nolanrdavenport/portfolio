@@ -30,6 +30,8 @@ window.onload = function() {
 }
 
 function init(){
+    console.time('game_initialize_time');
+
     canvas = document.getElementById("backgroundCanvas");
     context = canvas.getContext("2d");
     canvas.width = Math.ceil($(window).width() / 200) * 200;
@@ -62,6 +64,8 @@ function init(){
 
     // Starts the game loop
     interval = this.setInterval(tick, 1000 / 20);
+    
+    console.timeEnd('game_initialize_time');
 }
 
 // Each tick is a frame in the game
