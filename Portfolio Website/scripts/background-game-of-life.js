@@ -16,7 +16,7 @@ function Cell(isAlive, xPos, yPos) {
 }
 
 let cells;
-let gameColor = "rgb(0, 20, 0)";
+let gameColor = "rgb(0, 40, 40)";
 
 let interval;
 
