@@ -31,12 +31,12 @@ var loader = new GLTFLoader();
 
 
 var monkey;
-loader.load('./pages/learning-three-js/models/TV.glb', function(gltf) {
+loader.load('./pages/learning-three-js/models/comm.glb', function(gltf) {
     monkey = gltf.scene;
-    monkey.scale.set(0.7,0.7,0.7);
+    monkey.scale.set(0.6, 0.6, 0.6);
 
     monkey.traverse((o) => {
-        if(o.isMesh){
+        if (o.isMesh) {
             o.material.color = new THREE.Color(0x009900);
             o.material.emissive = new THREE.Color(0x00ffff);
             o.material.wireframe = true;
@@ -52,7 +52,7 @@ loader.load('./pages/learning-three-js/models/TV.glb', function(gltf) {
 });
 
 camera.position.z = 5;
-camera.position.y = 2.5;
+camera.position.y = 2;
 
 window.addEventListener('resize', onWindowResize, false);
 

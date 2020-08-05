@@ -25,7 +25,8 @@ h1 {
     text-align: center;
     margin: 10px;
 }
-.sub-page{
+
+.sub-page {
     text-align: center;
     margin-right: 10%;
 }
@@ -52,7 +53,8 @@ h1 {
     border-radius: 5px;
 }
 
-.navigation-bar li a:hover, .navigation-bar li a.active{
+.navigation-bar li a:hover,
+.navigation-bar li a.active {
     background-color: rgb(0, 20, 0);
 }
 
@@ -79,7 +81,8 @@ h1 {
     font-size: 20px;
     text-align: center;
     margin-top: 50px;
-    
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .link {
@@ -115,14 +118,14 @@ body::-webkit-scrollbar-thumb:hover {
 .game-showcase {
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
 }
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -130,6 +133,7 @@ footer{
     display: block;
     padding: 5px;
 }
-.game-description{
+
+.game-description {
     text-align: left;
 }

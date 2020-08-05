@@ -1,0 +1,795 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 429,
+      "max": [
+        1.7184346914291382,
+        1.8950574398040771,
+        0.46838879585266113
+      ],
+      "min": [
+        -0.63944339752197266,
+        -0.80409985780715942,
+        -0.47535920143127441
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5148,
+      "componentType": 5126,
+      "count": 429,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 429,
+      "max": [
+        0.088913701474666595,
+        0.83612817525863647
+      ],
+      "min": [
+        0.062692061066627502,
+        0.16031503677368164
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 744,
+      "max": [
+        428
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 10296,
+      "componentType": 5126,
+      "count": 673,
+      "max": [
+        0.78227841854095459,
+        1.2412848472595215,
+        1.2682846784591675
+      ],
+      "min": [
+        -0.97844880819320679,
+        -1.0949943065643311,
+        -1.0679947137832642
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 18372,
+      "componentType": 5126,
+      "count": 673,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3432,
+      "componentType": 5126,
+      "count": 673,
+      "max": [
+        0.83779704570770264,
+        0.99277937412261963
+      ],
+      "min": [
+        0.062222566455602646,
+        0.20213583111763
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 2976,
+      "componentType": 5125,
+      "count": 1056,
+      "max": [
+        672
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 26448,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        0.60372573137283325,
+        1.1310895681381226,
+        0.68225336074829102
+      ],
+      "min": [
+        -0.93274348974227905,
+        -0.95821118354797363,
+        -0.5494682788848877
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 37776,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        1,
+        1,
+        0.99981975555419922
+      ],
+      "min": [
+        -1,
+        -1,
+        -0.99998074769973755
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 8816,
+      "componentType": 5126,
+      "count": 944,
+      "max": [
+        0.18736501038074493,
+        0.46203801035881042
+      ],
+      "min": [
+        0.18736501038074493,
+        0.46203801035881042
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 7200,
+      "componentType": 5125,
+      "count": 1416,
+      "max": [
+        943
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 49104,
+      "componentType": 5126,
+      "count": 159,
+      "max": [
+        0.017164289951324463,
+        0.19171474874019623,
+        0.047928750514984131
+      ],
+      "min": [
+        -0.0099795106798410416,
+        -0.19171477854251862,
+        -0.04792863130569458
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 51012,
+      "componentType": 5126,
+      "count": 159,
+      "max": [
+        -0.30564561486244202,
+        0.87966740131378174,
+        0.87966769933700562
+      ],
+      "min": [
+        -1,
+        -0.87966740131378174,
+        -0.87966769933700562
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 16368,
+      "componentType": 5126,
+      "count": 159,
+      "max": [
+        0.31425446271896362,
+        0.8457368016242981
+      ],
+      "min": [
+        0.31087607145309448,
+        0.50553512573242188
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 12864,
+      "componentType": 5125,
+      "count": 216,
+      "max": [
+        158
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 52920,
+      "componentType": 5126,
+      "count": 724,
+      "max": [
+        0.828826904296875,
+        0.84071534872055054,
+        0.28887391090393066
+      ],
+      "min": [
+        -1.3061156272888184,
+        -0.5163729190826416,
+        -0.085243701934814453
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 61608,
+      "componentType": 5126,
+      "count": 724,
+      "max": [
+        0.99966001510620117,
+        0.99946612119674683,
+        1
+      ],
+      "min": [
+        -0.99966001510620117,
+        -0.99946612119674683,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 17640,
+      "componentType": 5126,
+      "count": 724,
+      "max": [
+        0.19032308459281921,
+        0.83333325386047363
+      ],
+      "min": [
+        0.058593794703483582,
+        0.16145828366279602
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 13728,
+      "componentType": 5125,
+      "count": 1110,
+      "max": [
+        723
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 70296,
+      "componentType": 5126,
+      "count": 76,
+      "max": [
+        0.17548751831054688,
+        0.26539266109466553,
+        0.0036707967519760132
+      ],
+      "min": [
+        -0.17548775672912598,
+        -0.26539313793182373,
+        -0.0022413581609725952
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 71208,
+      "componentType": 5126,
+      "count": 76,
+      "max": [
+        0.94382381439208984,
+        0.88375920057296753,
+        1
+      ],
+      "min": [
+        -0.94382381439208984,
+        -0.88375347852706909,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 23432,
+      "componentType": 5126,
+      "count": 76,
+      "max": [
+        0.1872793585062027,
+        0.52212482690811157
+      ],
+      "min": [
+        0.1872793585062027,
+        0.52212482690811157
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 18168,
+      "componentType": 5125,
+      "count": 132,
+      "max": [
+        75
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "JasperTobias (https://sketchfab.com/JasperTobias)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/retro-computer-monitor-8926293078874194b551e74c40a3debf",
+      "title": "Retro Computer & Monitor"
+    },
+    "generator": "Sketchfab-8.87.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 18696,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24040,
+      "byteOffset": 18696,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72120,
+      "byteOffset": 42736,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 114856,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/RetroPalette2_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 0,
+            "texCoord": 0
+          },
+          "glossinessFactor": 0,
+          "specularFactor": [
+            0.050000000000000003,
+            0.050000000000000003,
+            0.050000000000000003
+          ]
+        }
+      },
+      "name": "RetroPalette2"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Computer.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Monitor.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cable.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "MonitorButtons.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Mouse.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 17,
+            "POSITION": 16,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "MouseMat.002_RetroPalette2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TEXCOORD_0": 22
+          },
+          "indices": 23,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "50cb8c0060624749b2eb78dbf0a6cbc8.fbx"
+    },
+    {
+      "children": [
+        4,
+        12,
+        14
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5,
+        6
+      ],
+      "matrix": [
+        25.465055465698242,
+        0,
+        0,
+        0,
+        -0,
+        -4.1487841372222271e-06,
+        -25.465055465697905,
+        0,
+        0,
+        25.465055465697905,
+        -4.1487841372222271e-06,
+        0,
+        -49.074668884277344,
+        96.836410522460938,
+        17.138481140136719,
+        1
+      ],
+      "name": "Computer.002"
+    },
+    {
+      "mesh": 0,
+      "name": "Computer.002_RetroPalette2_0"
+    },
+    {
+      "children": [
+        7,
+        8,
+        10
+      ],
+      "matrix": [
+        0.99999970197677612,
+        0,
+        0,
+        0,
+        0,
+        0.99999970197677612,
+        0,
+        0,
+        0,
+        0,
+        0.99999970197677612,
+        0,
+        0.5500028133392334,
+        0.4880567193031311,
+        1.5377593040466309,
+        1
+      ],
+      "name": "Monitor.002"
+    },
+    {
+      "mesh": 1,
+      "name": "Monitor.002_RetroPalette2_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        0.99999982118606567,
+        0,
+        0,
+        0,
+        0,
+        0.99999982118606567,
+        0,
+        0,
+        0,
+        0,
+        0.99999982118606567,
+        0,
+        1.1026149988174438,
+        -0.43621945381164551,
+        -1.303520679473877,
+        1
+      ],
+      "name": "Cable.002"
+    },
+    {
+      "mesh": 2,
+      "name": "Cable.002_RetroPalette2_0"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        0.99999982118606567,
+        0,
+        0,
+        0,
+        0,
+        0.99999982118606567,
+        0,
+        0,
+        0,
+        0,
+        0.99999982118606567,
+        0,
+        -0.95360779762268066,
+        -0.073923349380493164,
+        -0.89218711853027344,
+        1
+      ],
+      "name": "MonitorButtons.002"
+    },
+    {
+      "mesh": 3,
+      "name": "MonitorButtons.002_RetroPalette2_0"
+    },
+    {
+      "children": [
+        13
+      ],
+      "matrix": [
+        17.844297409057617,
+        0,
+        0,
+        0,
+        -0,
+        -2.907205057153564e-06,
+        -17.844297409057383,
+        0,
+        0,
+        17.844297409057383,
+        -2.907205057153564e-06,
+        0,
+        -77.795150756835938,
+        85.812255859375,
+        30.025815963745117,
+        1
+      ],
+      "name": "Mouse.002"
+    },
+    {
+      "mesh": 4,
+      "name": "Mouse.002_RetroPalette2_0"
+    },
+    {
+      "children": [
+        15
+      ],
+      "matrix": [
+        100,
+        0,
+        0,
+        0,
+        -0,
+        -1.6292067939183141e-05,
+        -99.999999999998678,
+        0,
+        0,
+        99.999999999998678,
+        -1.6292067939183141e-05,
+        0,
+        -87.585403442382812,
+        84.758338928222656,
+        30.02580451965332,
+        1
+      ],
+      "name": "MouseMat.002"
+    },
+    {
+      "mesh": 5,
+      "name": "MouseMat.002_RetroPalette2_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
+
