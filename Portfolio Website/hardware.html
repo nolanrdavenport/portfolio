@@ -23,6 +23,24 @@
     <div class="text-body">
         <ul class="game-showcase">
             <li class="game-image">
+                <img src="https://nolan-davenport-website-images.s3.us-east-2.amazonaws.com/images/hardware-pictures/multicycle_computer_verilog.PNG" width="300px">
+                <!--TODO: change the image-->
+            </li>
+            <li>
+                <div class="game-description">
+                    <h1>Multicycle processor implemented in Verilog</h1>
+                    <p>
+                        This is my design for a multicycle processor. It has a word width of 24 bits, and an instruction size of 27 bits. This processor uses harvard architecture with a separate instruction and data memory. It currently supports add, addi, lw, sw, li, and bleq
+                        operations. These operations were tested in a verilog test bench and supported two programs:<br><br>
+                        <img src="https://nolan-davenport-website-images.s3.us-east-2.amazonaws.com/images/hardware-pictures/programs.PNG" width="300px">
+                        <br>
+                        <br><a target="_blank" class="link" href="https://github.com/nolanrdavenport/portfolio/blob/master/Software%20Development%20Projects/Embedded%20Software/LED_Array_PONG.ino">Click here to see the Verilog code</a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <ul class="game-showcase">
+            <li class="game-image">
                 <img src="https://nolan-davenport-website-images.s3.us-east-2.amazonaws.com/images/hardware-pictures/pong.png" width="300px">
             </li>
             <li>
@@ -44,10 +62,10 @@
             </li>
             <li>
                 <div class="game-description">
-                    <h1>8-bit Microprocessor</h1>
+                    <h1>8-bit Arithmetic Logic Unit</h1>
                     <p>
-                        This is a miniature 8-bit microprocessor. There is a clock input, aswell as 8 data bits. If a correct operation code is input, then it will input the two 8 bit numbers and store them into registers. After that, depending on the op code, the circuit will
-                        either add, subtract, or compare the two numbers. Then, the result will be located on the output pins.
+                        This is a miniature 8-bit ALU. There is a clock input, aswell as 8 data bits. If a correct operation code is input, then it will input the two 8 bit numbers and store them into registers. After that, depending on the op code, the circuit will either add,
+                        subtract, or compare the two numbers. Then, the result will be located on the output pins. This isn't a combinational ALU, but it instead takes multiple cycles to complete each operation.
                         <br>
                         <br><a target="_blank" class="link" href="https://nolan-davenport-website-images.s3.us-east-2.amazonaws.com/images/hardware-pictures/micro.PNG">Click here to see the full size image</a>
                     </p>
