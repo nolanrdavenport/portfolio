@@ -16,11 +16,11 @@ function Cell(isAlive, xPos, yPos) {
 }
 
 let cells;
-let gameColor = "rgb(0, 40, 40)";
+let gameColor = "rgb(0, 30, 30)";
 
 let interval;
 
-function changeColor(newColor){
+function changeColor(newColor) {
     gameColor = newColor;
 }
 
@@ -29,7 +29,7 @@ window.onload = function() {
     this.init();
 }
 
-function init(){
+function init() {
     console.time('game_initialize_time');
 
     canvas = document.getElementById("backgroundCanvas");
@@ -50,7 +50,7 @@ function init(){
     for (let i = 0; i < ySize; i++) {
         cells[i] = new this.Array(xSize);
     }
-    
+
     for (let r = 0; r < ySize; r++) {
         for (let c = 0; c < xSize; c++) {
             cells[r][c] = new Cell(false, c * squareSize, r * squareSize);
@@ -64,7 +64,7 @@ function init(){
 
     // Starts the game loop
     interval = this.setInterval(tick, 1000 / 20);
-    
+
     console.timeEnd('game_initialize_time');
 }
 
