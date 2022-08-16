@@ -1,0 +1,76 @@
+Specifications:
+    Address bus width: 14 bits
+        Supports 16384 addresses.
+        Address shared between instructions and program data space in memory. 
+    Entry point of programs at 0x2000 (starting address).
+        All branches relative to starting address.
+    Data width: 24 bits
+    Register address width: 5 bits
+        Register file will be 32 * 24 bits.
+    Design ISA with instruction that is 27 bits wide. 
+        Accommodate an immediate field which has 8 bits. 
+        4 bits devoted to instruction types which supports 16 instructions. 
+
+Instruction 27 bits:
+    Instruction fields:
+        OpCode[26-23]
+        Rd[22-18]
+        Rs1[17-13]
+        Rs2[12-8]
+        Imm[7-0]
+
+    Command set:
+        nop:    [0x0]   [0x00]  [0x00]  [0x00]  [0x00]              no operation        
+        add:    [0x1]   [Rd]    [Rs1]   [Rs2]   [0x00]              Rd = Rs1 + Rs2
+        addi:   [0x2]   [Rd]    [Rs1]   [0x00]  [Imm]               Rd = Rs1 + Imm
+        li:     [0x3]   [Rd]    [0x00]  [0x00]  [Imm]               Rd = Imm
+        bleq:   [0x4]   [0x00]  [Rs1]   [Rs2]   [0x2000 + Imm]      if(Rs1 <= Rs2) set PC to 0x2000 + Imm
+        lw:     [0x5]   [Rd]    [0x00]  [0x00]  [0x0000 + Imm]      Rd = M[Imm]
+        sw:     [0x6]   [0x00]  [Rs1]   [0x00]  [0x0000 + Imm]      M[Imm] = Rs1
+        bgeq:   [0x7]   [0x00]  [Rs1]   [Rs2]   [0x2000 + Imm]      if(Rs1 >= Rs2) set PC to 0x2000 + Imm
+        blt:    [0x8]   [0x00]  [Rs1]   [Rs2]   [0x2000 + Imm]      if(Rs1 < Rs2) set PC to 0x2000 + Imm
+        bgt:    [0x9]   [0x00]  [Rs1]   [Rs2]   [0x2000 + Imm]      if(Rs1 > Rs2) set PC to 0x2000 + Imm
+        beq:    [0xA]   [0x00]  [Rs1]   [Rs2]   [0x2000 + Imm]      if(Rs1 == Rs2) set PC to 0x2000 + Imm
+        sub:    [0xB]   [Rd]    [Rs1]   [Rs2]   [0x00]              Rd = Rs1 - Rs2
+        subi:   [0xC]   [Rd]    [Rs1]   [0x00]  [Imm]               Rd = Rs1 - Imm
+        and:    [0xD]   [Rd]    [Rs1]   [Rs2]   [0x00]              Rd = Rs1 & Rs2
+        or:     [0xE]   [Rd]    [Rs1]   [Rs2]   [0x00]              Rd = Rs1 | Rs2
+        xor:    [0xF]   [Rd]    [Rs1]   [Rs2]   [0x00]              Rd = Rs1 ^ Rs2
+
+    Assembly Examples:
+        nop                         no operation
+        add r00, r01, r02           Reg[0] = Reg[1] + Reg[2]
+        addi r00, r01, 5            Reg[0] = Reg[1] + 5
+        li r00, 25                  Reg[0] = 25
+        bleq r01, r02, 0x10         if(Reg[1] <= Reg[2]) set PC to 0x2010
+        lw r00, 0x25                Reg[0] = M[0x0025]
+        sw r12, 0x152               M[0x0152] = Reg[12]
+        bgeq r01, r02, 0x10         if(Reg[1] >= Reg[2]) set PC to 0x2010
+        blt r01, r02, 0x10          if(Reg[1] < Reg[2]) set PC to 0x2010
+        bgt r01, r02, 0x10          if(Reg[1] > Reg[2]) set PC to 0x2010
+        beq r01, r02, 0x10          if(Reg[1] == Reg[2]) set PC to 0x2010
+        sub r00, r01, r02           Reg[0] = Reg[1] - Reg[2]
+        subi r00, r01, 5            Reg[0] = Reg[1] - 5
+        and r00, r01, r02           Reg[0] = Reg[1] & Reg[2]
+        or r00, r01, r02            Reg[0] = Reg[1] | Reg[2]
+        xor r00, r01, r02           Reg[0] = Reg[1] ^ Reg[2]
+        
+    Registers:
+        Each register will be defined in the assembly code as rXX where XX is the decimal representation of the register address. 
+        Ex. r25 is register at address 11001
+
+
+
+Sample Programs:
+    C <- A + B:
+        add r00, r01, r02       // r00 = r01 + r02
+
+    for loop example:
+        li r00, 0               // sum              memory location: 0x00 relative to 0x2000
+        li r01, 0               // i
+        li r02, 10
+        add r00, r01, r00       // sum += i         memory location: 0x03 relative to 0x2000 -> start of for loop
+        addi r01, r01, 1        // i++
+        bleq r01, r02, 0x03     // i<=10
+
+
